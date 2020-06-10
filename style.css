@@ -1,0 +1,146 @@
+/****************** CSS RESET ******************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6,
+p, a, em, img, strong, i, center, ol, ul, li, form, label,
+table, caption, tbody, thead, tr, th, td,
+article, aside, figure, figcaption, footer, header, menu,
+nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+	font-family: brandon-grotesque, sans-serif;
+	vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, details, figcaption, figure,
+footer, header, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: black;
+  color: white;
+}
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****************** COLORS ******************/
+
+/*
+blue: #385959;
+beige:#F2F2DC
+red:  #D96D55;
+*/
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h1, h2, h3 {
+	line-height: 1.5;
+}
+
+.wrapper {
+	padding: 1rem;
+	position: relative;
+}
+
+.logo {
+	display: inline-block;
+	background-image: url("./icons/spacex_logo_160x42-01.svg");
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 42px;
+}
+
+.mobile-button {
+	display: inline-block;
+	background-image: url("./icons/burger_50x50-01.svg");
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 45px;
+	float: right;
+}
+
+.nav-menu {
+	display: none;
+}
+
+.hero {
+	background-image: url("./img/horizon_sm_819x550.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 520px;
+	border: 1px solid white;
+}
+
+.hero .wrapper {
+	padding: 1.2em;
+}
+
+.launch-club {
+	background-color: #385959;
+	display: block;
+	padding: .5rem;
+}
+
+.countdown {
+	padding-bottom: 4rem;
+}
+
+.timer-col {
+	display: inline-block;
+	padding: .3rem;
+	text-align: center;
+}
+
+.hero-header {
+	padding-top: 6rem;
+}
+
+.mission-patch {
+	background-color: #D96D55;
+	vertical-align: middle;
+	margin: .4rem;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
+.mission-info {
+	vertical-align: middle;
+	display: inline-block;
+	max-width: 63%;
+	border: 1px solid white;
+}
+
+.mission-info h2 {
+	border-top: 1px solid white;
+}
