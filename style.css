@@ -46,8 +46,10 @@ table {
 /*
 blue: #385959;
 beige:#F2F2DC
-red:  #D96D55;
+red:  #963722;
 */
+
+/****************** GENERAL ******************/
 
 h1 {
   font-size: 2rem;
@@ -65,10 +67,24 @@ h1, h2, h3 {
 	line-height: 1.5;
 }
 
+p {
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+}
+
 .wrapper {
 	padding: 1rem;
 	position: relative;
 }
+
+.arrow-down {
+	background-image: url("./icons/arrow_down_45x25-01.svg");
+	width: 45px;
+	height: 25px;
+	margin: 3rem auto;
+}
+
+/****************** NAV ******************/
 
 .logo {
 	display: inline-block;
@@ -91,12 +107,13 @@ h1, h2, h3 {
 	display: none;
 }
 
+/****************** HERO ******************/
+
 .hero {
 	background-image: url("./img/horizon_sm_819x550.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 520px;
-	border: 1px solid white;
 }
 
 .hero .wrapper {
@@ -130,7 +147,6 @@ h1, h2, h3 {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
-	border: 1px solid white;
 	border-radius: 50%;
 }
 
@@ -138,9 +154,130 @@ h1, h2, h3 {
 	vertical-align: middle;
 	display: inline-block;
 	max-width: 63%;
-	border: 1px solid white;
 }
 
 .mission-info h2 {
 	border-top: 1px solid white;
+}
+
+/****************** LAUNCH BOX ******************/
+
+.launch {
+	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+	 									url("./img/rocket_distance_1200x800_2.jpg");
+	background-size: cover;
+}
+
+.launch .wrapper {
+	padding: 2rem;
+}
+
+.launch ul {
+	display: inline-block;
+	width: 49%;
+}
+
+.launch li {
+	margin: .4rem 0;
+}
+
+.launch h3 {
+	margin: 1.1rem 0;
+}
+
+.launch p {
+	margin: 1.2rem 0 .5rem;
+}
+
+.launch p:last-of-type {
+	margin: 0;
+}
+
+/****************** NEWSLETTER ******************/
+
+.newsletter {
+	text-align: center;
+}
+
+.newsletter .wrapper {
+	padding: 2rem;
+	text-align: left;
+}
+
+.newsletter h3 {
+	margin: 1rem 0 .3rem;
+}
+
+.newsletter input {
+	display: block;
+	border: none;
+	padding: .4rem .2rem;
+	width: 100%;
+	background-color: #262626;
+	color: white;
+	border-bottom: 1px solid white;
+	font-size: 1.2rem;
+}
+
+.newsletter input[name="button"] {
+	background-image: url("./icons/subscribe_300x25_unclicked-01.svg");
+	background-repeat: none;
+	background-size: cover;
+	width: 240px;
+	height: 40px;
+	background-color: transparent;
+	color: white;
+	font-size: 1.3rem;
+	margin: 1rem auto 0;
+	border-bottom: none;
+}
+
+footer .wrapper {
+	border-top: 1px solid white;
+	padding: 1rem 0 0 0;
+	margin: 1rem;
+}
+
+footer .logo {
+	display: block;
+	margin: 1rem;
+}
+
+footer ul {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin: 1rem;
+	width: 60%;
+}
+
+footer ul:last-of-type li {
+	display: inline-block;
+	margin: 0 .2rem;
+}
+
+footer ul li a {
+	font-size: 1.2rem;
+}
+
+#facebook {
+	background-image: url("./icons/social_sm-01.svg");
+}
+
+#snapchat {
+	background-image: url("./icons/social_sm-02.svg");
+}
+
+#instagram {
+	background-image: url("./icons/social_sm-03.svg");
+}
+
+#twitter {
+	background-image: url("./icons/social_sm-04.svg");
+}
+footer ul:last-of-type a {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	margin-bottom: 
 }
