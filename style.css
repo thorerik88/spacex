@@ -81,7 +81,17 @@ p {
 	background-image: url("./icons/arrow_down_45x25-01.svg");
 	width: 45px;
 	height: 25px;
-	margin: 3rem auto;
+	margin: 1.2rem auto 2.5rem;
+}
+
+.col-2 {
+	display: inline-block;
+	width: 49.5%;
+	vertical-align: top;
+}
+
+.col-2:last-of-type {
+	float: right;
 }
 
 /****************** NAV ******************/
@@ -110,10 +120,16 @@ p {
 /****************** HERO ******************/
 
 .hero {
+	position: relative;
 	background-image: url("./img/horizon_sm_819x550.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 520px;
+	height: 500px;
+}
+
+.hero.future {
+	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+						url("./img/building_rocket_sm_820x550.jpg");
 }
 
 .hero .wrapper {
@@ -144,6 +160,10 @@ p {
 	padding-top: 6rem;
 }
 
+.hero-extra .hero-header {
+	padding-top: 2rem;
+}
+
 .mission-patch {
 	background-color: #D96D55;
 	vertical-align: middle;
@@ -164,11 +184,22 @@ p {
 	border-top: 1px solid white;
 }
 
+.hero-extra .mission-info h2 {
+	font-size: 28px;
+}
+
+.hero-message {
+	padding-top: 14rem;
+}
+
+.wrapper .launch-date h3 {
+	margin: 0;
+}
+
 /****************** LAUNCH BOX ******************/
 
 .launch {
-	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-	 									url("./img/rocket_distance_1200x800_2.jpg");
+	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/rocket_distance_1200x800_2.jpg");
 	background-size: cover;
 }
 
@@ -179,10 +210,13 @@ p {
 .launch ul {
 	display: inline-block;
 	width: 49%;
+	vertical-align: top;
 }
 
 .launch li {
 	margin: .4rem 0;
+	display: inline-block;
+	min-width: 100%;
 }
 
 .launch h3 {
