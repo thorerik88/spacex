@@ -136,6 +136,10 @@ p {
 	text-align: center;
 }
 
+.timer-col h2 {
+	border-bottom: 1px solid white;
+}
+
 .hero-header {
 	padding-top: 6rem;
 }
