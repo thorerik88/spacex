@@ -60,7 +60,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 h1, h2, h3 {
@@ -130,6 +134,11 @@ p {
 .hero.future {
 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
 						url("./img/building_rocket_sm_820x550.jpg");
+}
+
+.hero.historic {
+	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+					  url("./img/spaceshuttle_inflight_820x419.jpg");
 }
 
 .hero .wrapper {
@@ -213,18 +222,22 @@ p {
 }
 
 .launch .data p {
-	margin: .4rem 0;
 	flex: 1;
-	/* min-width: 100%; */
+
 }
 
 .launch h3 {
 	margin: 1.1rem 0;
 }
 
-.launch p {
-	margin: 1.2rem 0 .5rem;
+.data-wrapper {
+	margin: 1rem 0;
 }
+
+.launch .links {
+	display: inline;
+}
+
 
 /****************** NEWSLETTER ******************/
 
