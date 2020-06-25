@@ -81,7 +81,7 @@ p {
 	background-image: url("./icons/arrow_down_45x25-01.svg");
 	width: 45px;
 	height: 25px;
-	margin: 1.2rem auto 2.5rem;
+	margin: 2.5rem auto;
 }
 
 .col-2 {
@@ -124,7 +124,7 @@ p {
 	background-image: url("./img/horizon_sm_819x550.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 500px;
+	height: 490px;
 }
 
 .hero.future {
@@ -199,7 +199,7 @@ p {
 /****************** LAUNCH BOX ******************/
 
 .launch {
-	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/rocket_distance_1200x800_2.jpg");
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./img/rocket_distance_1200x800_2.jpg");
 	background-size: cover;
 }
 
@@ -207,16 +207,15 @@ p {
 	padding: 2rem;
 }
 
-.launch ul {
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
+.launch .data {
+	display: flex;
+	/* width: 49%; */
 }
 
-.launch li {
+.launch .data p {
 	margin: .4rem 0;
-	display: inline-block;
-	min-width: 100%;
+	flex: 1;
+	/* min-width: 100%; */
 }
 
 .launch h3 {
@@ -225,10 +224,6 @@ p {
 
 .launch p {
 	margin: 1.2rem 0 .5rem;
-}
-
-.launch p:last-of-type {
-	margin: 0;
 }
 
 /****************** NEWSLETTER ******************/
