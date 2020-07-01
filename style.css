@@ -278,7 +278,7 @@ p {
 
 .timeline-box {
 	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/spaceshuttle_inflight_820x419.jpg");
-	border: 1px solid white;
+	border: 3px solid white;
 	margin: 1rem 1rem 3rem 5rem;
 	width: 70%;
 	position: relative;
