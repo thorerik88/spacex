@@ -180,10 +180,6 @@ input, textarea {
 	padding-top: 2rem;
 }
 
-.hero-extra .hero-header {
-	padding-top: 2rem;
-}
-
 .mission-patch {
 	background-color: #D96D55;
 	vertical-align: middle;
@@ -249,7 +245,11 @@ input, textarea {
 	display: inline;
 }
 
-/****************** TIMELINE ******************/
+/****************** ABOUT ******************/
+
+.about {
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./img/earth_rise_600x600.jpg");
+}
 
 .rocket-icon {
 	background-image: url("./icons/rocket_27x100-01.svg");
@@ -387,7 +387,8 @@ input[type="submit"] {
 }
 
 .newsletter .wrapper {
-	padding: 2rem;
+	width: 80%;
+	margin: 0 auto;
 	text-align: left;
 }
 
@@ -457,3 +458,16 @@ footer ul:last-of-type a {
 	display: inline-block;
 	margin-bottom: 
 } 
+
+
+/****************** 600px ******************/
+
+@media only screen and (min-width: 600px) {
+	.nav-menu {
+		display: block;
+	}
+
+	.mobile-button {
+		display: none;
+	}
+}
