@@ -15,8 +15,9 @@
     <header>
       <nav>
         <div class="wrapper">
-          <div class="logo"></div>
+          <a class="logo" href="index.html"></a>
           <div class="mobile-button"></div>
+          <div class="close"></div>
         </div>
         <ul class="nav-menu">
           <li><a href="./index.html">MAIN LAUNCH</a></li>
@@ -34,7 +35,7 @@
           <div class="countdown">
             <h1>COUNTDOWN:</h1>
             <div class="timer">
-              <div class="timer-col">
+              <!-- <div class="timer-col">
                 <h2>28</h2>
                 <p>days</p>
               </div>
@@ -46,68 +47,76 @@
                 <h2>35</h2>
                 <p>mins</p>
               </div>
+              <div class="timer-col">
+                <h2>05</h2>
+                <p>seconds</p>
+              </div> -->
             </div>
           </div>
           <div class="hero-header-main">
-            <div class="mission-patch"></div>
+            <img class="mission-patch">
             <div class="mission-info">
-              <h3>UPCOMING LAUNCH</h3>
+              <!-- <h3>UPCOMING LAUNCH</h3>
               <h2>FALCON CREW</h2>
               <h3>Kennedy Space Center</h3>
-              <h3>30th of August 2020</h3>
+              <h3>30th of August 2020</h3> -->
             </div>
           </div>
         </div>
       </div>  <!-- End of hero -->
     </header>
     <div class="arrow-down"></div>
-    <div class="launch">
-      <div class="wrapper">
-        <h3>Launch information</h3>
-        <h4><u>Rocket information</u></h4>
-        <div class="data-wrapper">
-          <section class="data">
-            <p>Rocket name:</p>
-            <p>Falcon 9</p>
-          </section>
-          <section class="data">
-            <p>Re-use:</p>
-            <p>0</p>
-          </section>
-          <section class="data">
-            <p>Rocket type:</p>
-            <p>FT</p>
-          </section>
-          <section class="data">
-            <p>Nationality:</p>
-            <p>United States</p>
-          </section>
-          <section class="data">
-            <p>Payload type:</p>
-            <p>Satelite</p>
-          </section>
-          <section class="data">
-            <p>Payload mass(kg):</p>
-            <p>15400</p>
-          </section>
+    <div class="launch-main">
+      <!-- <div class="launch">
+        <div class="wrapper">
+          <h3>Launch information</h3>
+          <h4><u>Rocket information</u></h4>
+          <div class="data-wrapper">
+            <section class="data">
+              <p>Rocket name:</p>
+              <p>Falcon 9</p>
+            </section>
+            <section class="data">
+              <p>Re-use:</p>
+              <p>0</p>
+            </section>
+            <section class="data">
+              <p>Rocket type:</p>
+              <p>FT</p>
+            </section>
+            <section class="data">
+              <p>Nationality:</p>
+              <p>United States</p>
+            </section>
+            <section class="data">
+              <p>Payload type:</p>
+              <p>Satelite</p>
+            </section>
+            <section class="data">
+              <p>Payload mass(kg):</p>
+              <p>15400</p>
+            </section>
+          </div>
+          <h4><u>Details</u></h4>
+          <div class="data-wrapper">
+            <p>This mission will launch the eighth batch of operational Starlink satellites,
+            which are expected to be version 1.0, from SLC-40, Cape Canaveral AFS.
+            It is the ninth Starlink launch overall. The satellites will be delivered to low Earth
+            orbit and will spend a few weeks maneuvering to their operational altitude of
+            550 km. This mission is expected to include rideshare payloads, SkySats 16-18,
+            on top of the Starlink stack. The booster for this mission is expected to land an ASDS.</p>
+          </div>
         </div>
-        <h4><u>Details</u></h4>
-        <div class="data-wrapper">
-          <p>This mission will launch the eighth batch of operational Starlink satellites,
-          which are expected to be version 1.0, from SLC-40, Cape Canaveral AFS.
-          It is the ninth Starlink launch overall. The satellites will be delivered to low Earth
-          orbit and will spend a few weeks maneuvering to their operational altitude of
-          550 km. This mission is expected to include rideshare payloads, SkySats 16-18,
-          on top of the Starlink stack. The booster for this mission is expected to land an ASDS.</p>
-        </div>
-      </div>
-    </div> <!-- End of Launch -->
+      </div> End of Launch -->
+    </div>
     <div class="newsletter">
       <div class="wrapper">
+        <!-- <p>sent</p> -->
         <h3>Receive launch info and updates</h3>
         <form action="index.html" method="post">
-          <input type="text" name="email" value="Email">
-          <input type="button" name="button" value="SUBSCRIBE">
+          <input type="email" name="subscription" value="Email">
+          <input type="submit" name="button" value="SUBSCRIBE">
+          <p>x</p>
         </form>
       </div>
     </div> <!-- End of newsletter -->

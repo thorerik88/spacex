@@ -18,8 +18,9 @@
     <header>
         <nav>
             <div class="wrapper">
-                <div class="logo"></div>
+                <a class="logo" href="index.html"></a>
                 <div class="mobile-button"></div>
+                <div class="close"></div>
             </div>
             <ul class="nav-menu">
                 <li><a href="./index.html">MAIN LAUNCH</a></li>
@@ -35,12 +36,13 @@
             <h2>Contact Us</h2>
             <form action="">
                 <label for="name">Your Name</label>
-                <input type="text" name="name" value="Enter your name">
+                <input type="text" name="name" onfocus="this.value=''" value="Enter your name">
                 <label for="email">Email</label>
-                <input type="email" name="email" value="Enter your email">
+                <input type="email" name="email"  onfocus="this.value=''" value="Enter your email">
                 <label for="message">Message</label>
-                <textarea type="text" name="message" rows="4">Your message here...</textarea>
-                <input type="submit" value="SUBMIT MESSAGE">
+                <textarea type="text" name="message" rows="4"  onfocus="this.value=''"  >Enter your message...</textarea>
+                <input name="contact" type="submit" value="SUBMIT MESSAGE">
+                <div class="response"><p></p></div>
             </form>
         </div>
     </div>
@@ -48,8 +50,9 @@
         <div class="wrapper">
             <h3>Receive launch info and updates</h3>
             <form action="index.html" method="post">
-                <input type="text" name="email" value="Email">
-                <input type="button" name="button" value="SUBSCRIBE">
+                <input type="email" name="subscription" value="Email">
+                <input type="submit" name="button" value="SUBSCRIBE">
+                <p>x</p>
             </form>
         </div>
     </div> <!-- End of newsletter -->
@@ -75,5 +78,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="./js/script.js" defer></script>
+    <script type="text/javascript" src="./js/contact.js" defer></script>
 </body>
 </html>

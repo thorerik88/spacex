@@ -119,7 +119,7 @@ input, textarea {
 	height: 42px;
 }
 
-.mobile-button {
+.mobile-button, .close-button {
 	display: inline-block;
 	background-image: url("./icons/burger_50x50-01.svg");
 	background-repeat: no-repeat;
@@ -128,24 +128,33 @@ input, textarea {
 	float: right;
 }
 
+.close {
+	display: none;
+	background-image: url("./icons/close_50x50-01.svg");
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 45px;
+	float: right;
+}
+
 .nav-menu {
+	padding-left: 1.5rem;
 	position: absolute;
+	right: 0;
 	display: none;
 	z-index: 2;
 	background-color: black;
-	width: 100%;
+	width: 200px;
+	height: 100%;
 	text-align: center;
+	overflow-x: hidden;
+	transition: 0.5s;
 }
 
 .nav-menu li {
 	padding: 1rem;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #505050;
 }
-
-.nav-menu a {
-	font-size: 1.3rem;
-}
-
 
 /****************** HERO ******************/
 
@@ -154,7 +163,7 @@ input, textarea {
 	background-image: url("./img/horizon_lg_1600x900.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 490px;
+	min-height: 490px;
 }
 
 .hero.future {
@@ -196,12 +205,11 @@ input, textarea {
 }
 
 .mission-patch {
-	background-color: #D96D55;
+	/* background-color: #D96D55; */
 	vertical-align: middle;
-	margin: .4rem;
 	display: inline-block;
-	width: 100px;
-	height: 100px;
+	width: 130px;
+	height: 130px;
 	border-radius: 50%;
 }
 
@@ -377,7 +385,7 @@ label {
 	margin: 1rem 0 .2rem;
 }
 
-input[type="submit"] {
+input[name="contact"] {
 	background-image: url("./icons/contact_button_300x50-01.svg");
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -388,8 +396,18 @@ input[type="submit"] {
 	color: white;
 	display: block;
 	margin: 2rem auto 0;
+	outline: transparent;
 }
 
+.response {
+	text-align: center;
+	margin: 1rem;
+	color: red;
+}
+
+.response p {
+	font-size: 1.3rem;
+}
 
 /****************** NEWSLETTER ******************/
 
@@ -408,8 +426,13 @@ input[type="submit"] {
 	margin: 1rem 0 .3rem;
 }
 
+.newsletter p {
+	text-align: center;
+	visibility: hidden;
+}
+
 input[name="button"], .contact input[name="submit"] {
-	background-image: url("./icons/subscribe_300x25_unclicked-01.svg");
+	background-image: url("./icons/subscribe_300x25_passive-01.svg");
 	background-repeat: none;
 	background-size: cover;
 	width: 240px;
@@ -419,6 +442,23 @@ input[name="button"], .contact input[name="submit"] {
 	font-size: 1.3rem;
 	margin: 1rem auto 0;
 	border-bottom: none;
+	outline: transparent;
+}
+
+input[name="button"]:hover {
+	background-image: url("./icons/subscribe_300x25_hover-01.svg");
+	width: 240px;
+	height: 40px;
+	color: black;
+	cursor: pointer;
+}
+
+input[name="contact"]:hover {
+	background-image: url("./icons/contact_button_300x50_hover-01.svg");
+	width: 250px;
+	height: 42px;
+	color: black;
+	cursor: pointer;
 }
 
 footer .wrapper {
@@ -529,6 +569,10 @@ footer ul:last-of-type a {
 	.mission-info h2:first-of-type {
 		border-top: 1px solid white;
 		padding-top: .5rem;
+	}
+
+	.mission-patch { 
+		margin: 1rem;
 	}
 
 	/****************** TIMELINE ******************/	
@@ -664,6 +708,7 @@ footer ul:last-of-type a {
 		display: inline-block;
 		width: 75%;
 		line-height: 80px;
+		height: initial;
 	}
 
 	.nav-menu li {
@@ -676,7 +721,11 @@ footer ul:last-of-type a {
 		font-size: 1rem;
 	}
 
-	.mobile-button {
+	.nav-menu a:hover {
+		border-bottom: 1px solid white;
+	}
+
+	.mobile-button, .close {
 		display: none;
 	}
 }
