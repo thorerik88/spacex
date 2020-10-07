@@ -70,16 +70,6 @@ subSubmit.addEventListener('click', function(e){
       SPACEX API
 *********************/
 
-function datePrefix(date) {
-    if (date > 3 && date < 21) return 'th';
-    switch (date % 10) {
-        case 1: return "st";
-        case 2: return "nd";
-        case 3: return "rd";
-        default: return "th";
-    }
-}
-
 // Manipulate the main launch heading info
 function editMain(name, location, locationShort, date, mainPatch) {
     if (document.querySelector(".countdown")) {
@@ -137,7 +127,9 @@ function countdown(days, hrs, mins, sec) {
 
 function futHisLaunch (array, oneMission) {
     let htmlFut = "";
+    let listIndex = 0;
     for (i = 0; i < array.length; i++) {
+        listIndex += 1;
         let flightNumber = array[i].flight_number;
         let missionName = array[i].mission_name;
         let unixDates = array[i].launch_date_unix;
@@ -167,14 +159,14 @@ function futHisLaunch (array, oneMission) {
             details = "To be announced";
         }
         htmlFut = `
-            <div class="launch">
+            <div class="launch launch-col">
                 <div class="wrapper">
                     <h3>Launch information</h3>
                     <h3>${missionName}</h3>
-                    <img src="${missionPatch}" class="mission-patch">
+                    <img src="${missionPatch}" class="mission-patch" alt="an image of the mission logo">
                     <div class="launch-date col-2 ">
-                        <h3>Falcon 9</h3>
-                        <h3>2020-06-13</h3>
+                        <h3>${rocketName}</h3>
+                        <h3>${displayDate}</h3>
                     </div>
                     <h4><u>Rocket information</u></h4>
                     <div class="data-wrapper">
@@ -225,27 +217,19 @@ function futHisLaunch (array, oneMission) {
         } else {
             let launchList = document.querySelector(".launch-list");
             launchList.innerHTML += htmlFut;
-            
         }
     } 
 }
 
 function convertDate(unix) {
-        let today = new Date()
-        let dateToday = today.getDate();
-        dateToday = dateToday + datePrefix(dateToday)
         let convertUnix = new Date(unix * 1000)
-        let month = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"][convertUnix.getMonth()];
+        let month = convertUnix.getMonth();
         let conDate = convertUnix.getDate()
-        conDate = conDate + datePrefix(dateToday)
-        return conDate + " " + month + " " + convertUnix.getFullYear();
-        
+        return conDate + "/" + month + " - " + convertUnix.getFullYear();
 }
 
 function data(futLaunch, hisLaunch){
     let upcomingLaunch = futLaunch[0];
-
     // display Upcoming Launch
     let upcomingName = upcomingLaunch.rocket.rocket_name;
     let launchDate = upcomingLaunch.launch_date_utc;    
@@ -257,12 +241,13 @@ function data(futLaunch, hisLaunch){
     // Upcoming Launch information
     let oneMission = false;
     if (document.querySelector(".future")) {
-        console.log(futLaunch)
         futHisLaunch(futLaunch, oneMission)
         
     } else if (document.querySelector(".historic")) {
         hisLaunch.reverse();
         futHisLaunch(hisLaunch, oneMission)
+    } else if (document.querySelector(".contact") || document.querySelector(".about")) {
+        
     } else {
         oneMission = true;
         futHisLaunch(futLaunch, oneMission)

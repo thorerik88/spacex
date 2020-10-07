@@ -120,7 +120,6 @@ input, textarea {
 }
 
 .mobile-button, .close-button {
-	display: inline-block;
 	background-image: url("./icons/burger_50x50-01.svg");
 	background-repeat: no-repeat;
 	width: 45px;
@@ -205,7 +204,6 @@ input, textarea {
 }
 
 .mission-patch {
-	/* background-color: #D96D55; */
 	vertical-align: middle;
 	display: inline-block;
 	width: 130px;
@@ -248,7 +246,6 @@ input, textarea {
 
 .launch .data {
 	display: flex;
-	/* width: 49%; */
 }
 
 .launch .data p {
@@ -274,94 +271,87 @@ input, textarea {
 	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./img/earth_rise_1600x864.jpg");
 }
 
-.rocket-icon {
-	background-image: url("./icons/rocket_27x100-01.svg");
-	width: 54px;
-	height: 200px;
-	background-repeat: no-repeat;
+.timeline {
 	margin: 0 auto;
-}
-
-.timeline-intro:first-of-type {
-	display: inline-block;
-	width: 60px;
-}
-
-.timeline-intro {
-	width: 75%;
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 8px;
-}
-
-.line {
-	position: relative;
-	margin: 0 auto;
-}
-
-.line::after {
-	content: '';
-	position: absolute;
-	width: 6px;
-	background-color: white;
-	top: 0;
-	bottom: 0;
-	left: 10px;
-	margin-left: 25px;
+	width: 90%;
 }
 
 .timeline-box {
-	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/spaceshuttle_inflight_820x419.jpg");
-	border: 3px solid white;
-	margin: 1rem 1rem 3rem 5rem;
-	width: 70%;
+	display: flex;
+}
+
+.timeline-box.last-time {
+	height: 30px;
+}
+
+.first-time .year, .last-time .year {
+	visibility: hidden;
+}
+
+.first-time .timeline-info, .last-time .timeline-info {
 	position: relative;
-	border-radius: 5px;
+	border: none;
 }
 
-.timeline-box h3:first-of-type {
-	border-bottom: 1px solid white;
-	line-height: 1.7rem;
-}
-
-.timeline-box h3:last-of-type {
-	margin-bottom: 1.5rem;
-}
-
-.timeline-box p:first-of-type {
-	margin-bottom: .6rem;
-}
-
-.timeline-box::before {
-	content: " ";
-	height: 0;
+.first-time .rocket-ship {
+	background-image: url("./icons/rocket_27x100-01.svg");
+	background-repeat: no-repeat;
+	width: 28px;
+	height: 100px;
+	z-index: 1;
+	background-color: black;
+	border: none;
 	position: absolute;
-	top: 2px;
-	width: 0;
-	left: -10px;
-	border: 1px solid white;
-	border-width: 10px 10px 10px 0;
-	border-color: transparent white transparent transparent;
+	left: -17px;
+	bottom: 0;
 }
 
-.timeline-box::after {
-	content: '';
+.last-time .rocket-cloud {
+	background-image: url("./icons/launch_cloud_60x27-01.svg");
+	width: 60px;
+	height: 27px;
+	z-index: 1;
+	background-color: transparent;
+	border: none;
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	left: -57.6px;
-	background-color: white;
-	border: 4px solid #385959;
-	top: -4px;
-	border-radius: 50%;
+	left: -33px;
+	top: -27px;
+}
+
+.year h3 {
+	color: rgba(255,255,255, .7);
+	font-size: 1rem;
+}
+
+.timeline-info .wrapper {
+	background-color: rgba(20,20,20,1);
+	border-left: 1px solid #963722;
+}
+
+.wrapper {
+	position: relative;
+	padding: 4rem 1rem;
+}
+
+.wrapper-space {
+	bottom: 0;
+	left: 25%;
+	display: inline-block;
+	position: absolute;
+	border-bottom: 1px dashed rgba(255,255,255,.3);
+	width: 50%;
 	z-index: 1;
 }
 
-.timeline-cloud {
-	background-image: url("./icons/launch_cloud_60x27-01.svg");
-	width: 70px;
-	height: 31px;
-	margin-left: 4px;
+.timeline-circle {
+	top: 4.1rem;
+	left: -0.7rem;
+	position: absolute;
+	border: 1px solid #963722;
+	background-color: rgba(20,20,20,1);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
 }
 
 /****************** CONTACT ******************/
@@ -412,6 +402,7 @@ input[name="contact"] {
 /****************** NEWSLETTER ******************/
 
 .newsletter {
+	display:block;
 	text-align: center;
 	padding: 2rem 0;
 }
@@ -545,7 +536,6 @@ footer ul:last-of-type a {
 		line-height: 1.3rem;
 	}
 
-	
 
 	/****************** HERO ******************/
 
@@ -575,59 +565,13 @@ footer ul:last-of-type a {
 		margin: 1rem;
 	}
 
-	/****************** TIMELINE ******************/	
-	.timeline-order {
-		display: flex;
-		flex-direction: column-reverse;
-	}
+	/****************** CONTENT ******************/	
 
-	.timeline-intro {
-		display: block;
-		width: 50%;
-		margin: 0 auto;
-		text-align: center;
+	.launch {
+		width: 80%;
+		margin: 2rem auto;
 	}
 	
-	.line::after {
-		left: 50%;
-		margin-left: -3px;
-	}
-
-	.left {
-		left: 0;
-	}
-
-	.right {
-		left: 50%;
-	}
-
-	.timeline-box {
-		position: relative;
-		display: block;
-		margin: 1rem 2.2rem;
-		max-width: 40%;
-	}
-
-	.left::before {
-		left: 100%;
-  		border-width: 10px 0 10px 10px;
-  		border-color: transparent transparent transparent white;
-	}
-
-	.right::after {
-		left: -53px;
-	}
-
-	.left::after {
-		right: -18%;
-		left: initial;
-	}
-
-	.timeline-cloud {
-		margin: 0 auto;
-		height: 32px;
-		width: 70px;
-	}
 
 	/****************** NEWSLETTER ******************/
 
@@ -664,10 +608,6 @@ footer ul:last-of-type a {
 }
 
 @media only screen and (min-width: 992px) {
-
-	.launch .wrapper {
-		padding: 4rem;
-	}
 
 	/****************** HERO ******************/
 
@@ -721,13 +661,34 @@ footer ul:last-of-type a {
 		font-size: 1rem;
 	}
 
-	.nav-menu a:hover {
+	.nav-menu a:hover, .active {
 		border-bottom: 1px solid white;
 	}
 
 	.mobile-button, .close {
 		display: none;
 	}
+	/****************** MAIN CONTENT ******************/
+	
+	.launch .wrapper {
+		padding: 4rem;
+	}
+
+	/****************** ABOUT ******************/
+
+	.first-time .rocket-ship {
+	width: 50px;
+	height: 180px;
+	left: -28px;
+}
+
+	.last-time .rocket-cloud {
+		width: 90px;
+		height: 40px;
+		left: -48px;
+		top: -40px;
+	}
+
 }
 
 /************************************* 
@@ -762,6 +723,19 @@ footer ul:last-of-type a {
 		margin: 6rem;
 	}
 
+	/****************** CONTENT ******************/	
+
+	.launch-list {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.launch-col {
+		flex: 0 0 45%;
+		margin: 2rem auto;
+	}	
+	
 	/****************** TIMELINE ******************/
 
 	.timeline {
@@ -785,6 +759,9 @@ footer ul:last-of-type a {
 **************************************/
 
 @media only screen and (min-width: 1600px) {
+
+	/****************** HERO ******************/
+
 	.hero {
 		min-height: 800px;
 	}
@@ -803,11 +780,6 @@ footer ul:last-of-type a {
 
 	.countdown {
 		margin: 5rem 9rem 0 9rem;
-	}
-
-	.launch {
-		width: 60%;
-		margin: 0 auto;
 	}
 
 	.launch-club {
